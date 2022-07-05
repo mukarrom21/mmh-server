@@ -12,9 +12,11 @@ app.use(express.json())
 
 
 // -----------------------------------------
+DB_USER=myUser
+DB_PASS=6r9eJsC9S2cHReSW
 // -----------------------------------------
 
-const uri = "mongodb+srv://myUser:6r9eJsC9S2cHReSW@mycluster.j7lpubg.mongodb.net/?retryWrites=true&w=majority";
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@mycluster.j7lpubg.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 async function run() {
