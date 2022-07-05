@@ -12,7 +12,7 @@ app.use(express.json())
 
 // test api on website
 app.get('/', (req, res) => {
-    res.send("Welcome to Mukarrom Hosain Server.")
+    res.send("Welcome to Mukarrom Hosain Server. test-1")
 })
 
 // test api on console
